@@ -7,4 +7,4 @@ Exemplu: 120 319 123 41 58 1 931 2 EOF
 
 2)calc_expresii_aritmetici.c -> Din fisier-ul "expresii.in" se citeste o expresie de formatul (E) unde E este expresia, urmata apoi de valorile operanzilor. Sa se calculeze valoarea expresiei.
 
-Exemplu: (a*(b-c)+d/e*f+g) 10 5 4 8 4 3 2 (Importanta exte ordinea alfabetica a operanzilor!) 
+Exemplu: (a*(b-c)+d/e*f+g) 10 5 4 8 4 3 2 (Importanta este ordinea alfabetica a operanzilor!) 
