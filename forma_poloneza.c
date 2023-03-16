@@ -65,8 +65,8 @@ char* forma_poloneza(char *dest, char expression[]){
             pop(stiva_operatori,&stiva_varf); // scoate paranteza deschisa
         } 
     }
-    strcpy(dest,vec);
-    return dest;
+    
+    return strcpy(dest,vec);
 }
 
 int calc_fp(char fp[], int fp_size, int val[]){
@@ -115,6 +115,7 @@ int main(){
         perror(NULL);
         exit(-1);
     }
+
     char expression[MAX_EXPRESSION_LENGTH];
     fscanf(f,"%s",expression); //lucreaza doar daca nu sunt spatii intre operatori/operanzi
     int nr; int val_length = 0;
@@ -123,10 +124,13 @@ int main(){
         val[val_length] = nr;
         val_length++;
     }
-    char fp[MAX_EXPRESSION_LENGTH];
-    strcpy(fp, forma_poloneza(fp,expression));
+    
+    char temp[MAX_EXPRESSION_LENGTH],fp[MAX_EXPRESSION_LENGTH]; //Am creat variabila temp pentru a evita eroarea afisata de valgrind "Source and destination overlap in strcpy"
+    strcpy(fp, forma_poloneza(temp,expression));
     int result = calc_fp(fp,strlen(fp),val);   
     printf("%d\n",result);
+
+
     if(fclose(f) != 0){
         perror(NULL);
         exit(-1);
