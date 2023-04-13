@@ -2,3 +2,7 @@
 a
 expresii.in
 test.c
+test
+*.txt
+*.svg
+write_test_for_fibonaci.c
