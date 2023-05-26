@@ -1,10 +1,4 @@
-/* Generate box fractal in SVG format (Scalable vector graphics)
- * http://en.wikipedia.org/wiki/Vicsek_fractal
- * Run ./a.out > boxfract.svg and look at the file in a browser
- * SVG drawing commands: l=line, m=move, h=horiz. line, v=vert. line
- * uppercase: absolute coordinates, lowercase: relative coordinates
- * e.g. M x y = move to (x, y)
- * l dx dy = line from current point, moving by dx, dy */
+
 
 #include <stdio.h>
 
